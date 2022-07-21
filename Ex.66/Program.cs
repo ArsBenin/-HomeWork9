@@ -4,3 +4,22 @@
 M = 1; N = 15 -> 120
 M = 4; N = 8. -> 30
 */
+
+int Sum(int m, int n)
+{
+    if(m==n)
+    { 
+    return m;
+    }
+    else
+    {
+    return m+Sum(m+1,n);
+    }
+}
+
+Console.WriteLine("введите число M");
+int m = int.Parse(Console.ReadLine());
+Console.WriteLine("введите число N");
+int n = int.Parse(Console.ReadLine());
+
+Console.WriteLine($"{Sum(m,n)}");
